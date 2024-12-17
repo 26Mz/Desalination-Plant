@@ -12,5 +12,5 @@ C:\Users\[YOUR USERNAME]\Documents\Arduino\libraries
 6. Aferward you upload you .ino file to the Arduino, but make sure, that no terminal is opened, after that you start the python file, that saves the measurements into data.txt.
 
    Code from:
-   https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2309/SEN0244_Web.pdf
+   https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2309/SEN0244_Web.pdf and
    https://cdn-reichelt.de/documents/datenblatt/A300/LK-TEMP2_ANLEITUNG_2021-12-02.pdf
