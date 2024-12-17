@@ -1,11 +1,11 @@
-// Benötigte Libraries werden importiert
+// Import Libraries
 #include <DallasTemperature.h>
 #include <OneWire.h>
-// Hier wird der Eingangs-Pin deklariert, an dem das SensorModul angeschlossen ist
+// The input pin to which the sensor module is connected is declared here
 #define LKTemp2 4
 #define ECSencor A0
 int counter = 0;
-// Libraries werden konfiguriert
+// configure Libraries
 OneWire oneWire(LKTemp2);
 DallasTemperature sensors(&oneWire);
 
@@ -18,25 +18,13 @@ int analogBufferIndex = 0, copyIndex = 0;
 float averageVoltage = 0, tdsValue = 0, temperature = 25;
 
 void setup() {
-  // Initialisierung Serielle Ausgabe
+  // Initialisation Serial output
   Serial.begin(9600);
   pinMode(TdsSensorPin, INPUT);
-  // Sensor wird initialisiert
+  // Sensor gets initialised
   sensors.begin();
 }
-/*
-void loop() {
-  // Temperaturmessung wird gestartet...
-  sensors.requestTemperatures();
-  // ... und gemessene Temperatur ausgeben
-  Serial.print(counter);
-  Serial.print("\t");
-  Serial.print(sensors.getTempCByIndex(0));
-  Serial.print("\t");
-  Serial.println(analogRead(ECSencor));
-  counter++;
-  delay(1000);  // 1s Pause bis zur nächsten Messung
-}*/
+
 static unsigned long analogSampleTimepoint = millis();
 static unsigned long printTimepoint = millis();
 void loop() {
@@ -61,9 +49,6 @@ void loop() {
     float compensationVolatge = averageVoltage / compensationCoefficient;
     // temperature compensation
     tdsValue = (133.42 * compensationVolatge * compensationVolatge * compensationVolatge - 255.86 * compensationVolatge * compensationVolatge + 857.39 * compensationVolatge) * 0.5;  //convert voltage value to tds value
-    //Serial.print("voltage:");
-    //Serial.print(averageVoltage,2);
-    //Serial.print("V ");
     Serial.print(counter);
     Serial.print("\t");
     Serial.print(tdsValue);
