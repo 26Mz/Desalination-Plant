@@ -9,7 +9,7 @@ Instructions:
 4. For the python library you only use the "serial" library, to use the Arduino, you need to install [these Libraries](https://joy-it.net/files/files/Produkte/LK-Temp2/LK-Temp2_Arduino-Libraries.zip), and put them into: 
 C:\Users\[YOUR USERNAME]\Documents\Arduino\libraries
 5. Now you download the code files.
-6. Aferward you upload you .ido file to the Arduino, but make sure, that no terminal is opened, after that you start the python file, that saves the measurements into data.txt.
+6. Aferward you upload you .ino file to the Arduino, but make sure, that no terminal is opened, after that you start the python file, that saves the measurements into data.txt.
 
    Code from:
    https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2309/SEN0244_Web.pdf
