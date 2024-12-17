@@ -10,3 +10,7 @@ Instructions:
 C:\Users\[YOUR USERNAME]\Documents\Arduino\libraries
 5. Now you download the code files.
 6. Aferward you upload you .ido file to the Arduino, but make sure, that no terminal is opened, after that you start the python file, that saves the measurements into data.txt.
+
+   Code from:
+   https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2309/SEN0244_Web.pdf
+   https://cdn-reichelt.de/documents/datenblatt/A300/LK-TEMP2_ANLEITUNG_2021-12-02.pdf
